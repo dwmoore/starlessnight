@@ -11,6 +11,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'dotenv-rails', '1.0.2'
 end
 gem 'bootstrap-sass'
 gem 'devise'
