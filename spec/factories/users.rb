@@ -8,5 +8,11 @@ FactoryGirl.define do
       role 'admin'
     end
 
+    trait :with_routes do
+      after(:create) do |user|
+        FactoryGirl.create_list(:route, 5, user: user)
+      end
+    end
+
   end
 end
