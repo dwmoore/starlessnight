@@ -39,6 +39,7 @@ group :production do
 end
 group :test do
   gem 'capybara'
+  gem 'shoulda-matchers', require: false
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
