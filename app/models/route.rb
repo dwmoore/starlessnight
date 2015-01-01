@@ -1,5 +1,4 @@
 class Route < ActiveRecord::Base
-  belongs_to :user
 
   validates :starting_system, presence: true
   validates :ending_system, presence: true
@@ -13,4 +12,5 @@ class Route < ActiveRecord::Base
   validates :distance, length: { maximum: 5 }
   validates :make_private, presence: true
 
+  belongs_to :user
 end
