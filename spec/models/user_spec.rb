@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe User do
 
   before(:each) { @user = User.new(email: 'user@example.com') }
@@ -5,6 +7,7 @@ describe User do
   subject { @user }
 
   it { should respond_to(:email) }
+  it { should have_many(:routes) }
 
   it "#email returns a string" do
     expect(@user.email).to match 'user@example.com'
