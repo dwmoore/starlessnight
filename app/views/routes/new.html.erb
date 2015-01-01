@@ -1,9 +1,12 @@
 <%= simple_form_for @route do |f| %>
   <%= f.input :starting_system, placeholder: 'Starting System' %>
+  <%= f.input :starting_dock, placeholder: 'Starting Dock' %>
   <%= f.input :ending_system, placeholder: 'Ending System' %>
+  <%= f.input :ending_dock, placeholder: 'Ending Dock' %>
+  <%= f.input :distance, placeholder: '12.34' %>
   <%= f.input :commodity, placeholder: 'Commodity Purchased' %>
   <%= f.input :buy_price, placeholder: 'Purchase Price' %>
-  <%= f.input :sell_price, placeholder: '12.34' %>
+  <%= f.input :sell_price, placeholder: 'Sell Price' %>
   <%= f.input :make_private %>
   <%= f.submit %>
 <% end %>

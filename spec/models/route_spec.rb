@@ -8,6 +8,8 @@ RSpec.describe Route, :type => :model do
   it { should validate_presence_of(:sell_price) }
   it { should validate_presence_of(:distance) }
   it { should validate_presence_of(:make_private) }
+  it { should validate_presence_of(:starting_dock) }
+  it { should validate_presence_of(:ending_dock) }
 
   it { should validate_numericality_of(:buy_price) }
   it { should validate_numericality_of(:sell_price) }

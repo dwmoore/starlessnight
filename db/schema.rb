@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230173746) do
+ActiveRecord::Schema.define(version: 20150101165108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20141230173746) do
     t.integer  "buy_price"
     t.integer  "sell_price"
     t.decimal  "distance"
+    t.string   "starting_dock"
+    t.string   "ending_dock"
   end
 
   add_index "routes", ["ending_system"], name: "index_routes_on_ending_system", using: :btree
