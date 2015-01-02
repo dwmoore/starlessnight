@@ -13,8 +13,8 @@ class Route < ActiveRecord::Base
   validates :buy_price, numericality: true
   validates :sell_price, numericality: true
   validates :distance, numericality: true
-  
-  validates :distance, length: { maximum: 5 }
+
+  #validates :distance, length: { maximum: 10 }
 
   belongs_to :user
 end
