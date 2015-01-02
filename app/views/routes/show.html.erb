@@ -1,1 +1,11 @@
-test
+<%= @route.starting_system %>
+<%= @route.starting_dock %>
+<%= @route.ending_system%>
+<%= @route.ending_dock %>
+<%= @route.distance %>
+<%= @route.commodity %>
+<%= @route.buy_price %>
+<%= @route.sell_price %>
+<%= @route.make_private %>
+<%= link_to 'Edit Route', edit_route_path(@route) %>
+<%= link_to 'Delete Route', route_path(@route), method: :delete, data: { confirm: 'Confirm Delete?' } %>
