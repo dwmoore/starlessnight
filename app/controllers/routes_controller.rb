@@ -1,9 +1,9 @@
 class RoutesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_route, only: [:show, :edit, :update, :destroy]
 
   def index
-    user = current_user
-    @routes = user.routes
+    @routes = current_user.routes
   end
 
   def show
@@ -17,7 +17,7 @@ class RoutesController < ApplicationController
   end
 
   def create
-    @route = current_user.routes.new(route_params)
+    handle_create
   end
 
   def update
@@ -32,6 +32,22 @@ class RoutesController < ApplicationController
 
   def route_params
     params.require(:route).permit(:make_private, :starting_system, :starting_dock, :ending_system, :ending_dock, :commodity, :buy_price, :sell_price, :distance)
+  end
+
+  def set_route
+    @route = Route.find(params[:id])
+  end
+
+  def handle_create
+    @route = current_user.routes.new(route_params)
+
+    if @route.save
+      flash[:notice] = "Route Saved"
+      redirect_to routes_path
+    else
+      flash[:error] = "Error Detected"
+      render action: :new
+    end
   end
 
   def handle_update(route)
