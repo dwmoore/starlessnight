@@ -1,4 +1,12 @@
-testing
-<%= @routes.each do |route| %>
-  <%= route.id %>
+<% @routes.each do |route| %>
+  <div id="<%= dom_id(route) %>" class="">
+    <%= route.starting_system %>
+    <%= route.starting_dock %>
+    <%= route.ending_system %>
+    <%= route.ending_dock %>
+    <%= route.distance %>
+    <%= route.commodity %>
+    <%= route.buy_price %>
+    <%= route.sell_price %>
+  </div>
 <% end %>
