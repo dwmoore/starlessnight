@@ -8,17 +8,11 @@ require 'rails_helper'
 feature 'Visiting route index page' do
 
   context 'as a user' do
-    it 'shows a welcome message' do
+    pending it 'shows a welcome message' do
       user = FactoryGirl.create(:user, :with_routes)
       visit('routes#index')
 
       expect(page).to have_content(user.routes.first.id)
-    end
-  end
-
-  context 'as a user' do
-    it 'shows a list of routes' do
-
     end
   end
 end

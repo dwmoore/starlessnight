@@ -4,7 +4,7 @@ FactoryGirl.define do
     starting_dock 'Dock 1'
     ending_system 'System Two'
     ending_dock 'Dock 2'
-    distance 12.1
+    distance '12.1'
     commodity 'Gold'
     buy_price 1000
     sell_price 1800
