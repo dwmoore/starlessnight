@@ -14,7 +14,7 @@ class Route < ActiveRecord::Base
   validates :sell_price, numericality: true
   validates :distance, numericality: true
 
-  #validates :distance, length: { maximum: 10 }
+  validates :distance, format: { with: /\A(\d{0,3})[\.]?(\d{0,2})\z/, message: 'Distance should follow ###.## format' }
 
   belongs_to :user
 end

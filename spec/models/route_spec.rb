@@ -15,10 +15,8 @@ RSpec.describe Route, :type => :model do
   it { should validate_numericality_of(:sell_price) }
   it { should validate_numericality_of(:distance) }
 
-  # I think there is a bug in validate_length_of.
-  # It presently gives an undefined method error.
-  #
-  # it { should validate_length_of(:distance) }
+  it { should allow_value("12", "123", "34.00", "55.12", "0.01", "123.12").for(:distance) }
+  it { should_not allow_value("123456", ".001", "1.001", "1111.22").for(:distance) }
 
   it { should belong_to(:user) }
 
