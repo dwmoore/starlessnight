@@ -7,13 +7,15 @@ class Route < ActiveRecord::Base
   validates :commodity, presence: true
   validates :buy_price, presence: true
   validates :sell_price, presence: true
-  validates :distance, presence: true
+  validates :jump_distance, presence: true
+  validates :dock_distance, presence: true
 
   validates :buy_price, numericality: true
   validates :sell_price, numericality: true
-  validates :distance, numericality: true
+  validates :jump_distance, numericality: true
+  validates :dock_distance, numericality: true
 
-  validates :distance, format: { with: /\A(\d{0,3})[\.]?(\d{0,2})\z/, message: 'Distance should follow ###.## format' }
+  validates :jump_distance, format: { with: /\A(\d{0,3})[\.]?(\d{0,2})\z/, message: 'Distance should follow ###.## format' }
 
   belongs_to :user
 end
