@@ -12,11 +12,11 @@ feature 'User creates a new route' do
     fill_in 'Starting Dock', with: 'Some Dock'
     fill_in 'Ending System', with: 'Some Other System'
     fill_in 'Ending Dock', with: 'Some Other Dock'
-    fill_in 'Distance', with: 17.11
-    fill_in 'Commodity', with: 'Gold'
-    fill_in 'Buy price', with: 1155
-    fill_in 'Sell price', with: 1345
-    check 'Make private'
+    fill_in 'route_jump_distance', with: 17.11
+    fill_in 'route_dock_distance', with: 17.11
+    fill_in 'Commodity Purchased', with: 'Gold'
+    fill_in 'Purchase Price', with: 1155
+    fill_in 'Sell Price', with: 1345
     click_button 'Create Route'
 
     expect(page).to have_content('Route Saved')
@@ -30,11 +30,11 @@ feature 'User creates a new route' do
     fill_in 'Starting Dock', with: 'Some Dock'
     fill_in 'Ending System', with: 'Some Other System'
     fill_in 'Ending Dock', with: 'Some Other Dock'
-    fill_in 'Distance', with: 17.11
-    fill_in 'Commodity', with: 'Gold'
-    fill_in 'Buy price', with: 1155
-    fill_in 'Sell price', with: 1345
-    check 'Make private'
+    fill_in 'route_jump_distance', with: 17.11
+    fill_in 'route_dock_distance', with: 17.11
+    fill_in 'Commodity Purchased', with: 'Gold'
+    fill_in 'Purchase Price', with: 1155
+    fill_in 'Sell Price', with: 1345
     click_button 'Create Route'
 
     expect(page).to have_content('Error Detected')
