@@ -10,6 +10,7 @@ FactoryGirl.define do
     buy_price 1000
     sell_price 1800
     make_private true
+    cargo_capacity '34'
 
     user
   end

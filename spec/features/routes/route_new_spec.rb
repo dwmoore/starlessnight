@@ -17,6 +17,7 @@ feature 'User creates a new route' do
     fill_in 'Commodity Purchased', with: 'Gold'
     fill_in 'Purchase Price', with: 1155
     fill_in 'Sell Price', with: 1345
+    fill_in 'route_cargo_capacity', with: 55
     click_button 'Create Route'
 
     expect(page).to have_content('Route Saved')
@@ -35,6 +36,7 @@ feature 'User creates a new route' do
     fill_in 'Commodity Purchased', with: 'Gold'
     fill_in 'Purchase Price', with: 1155
     fill_in 'Sell Price', with: 1345
+    fill_in 'route_cargo_capacity', with: 55
     click_button 'Create Route'
 
     expect(page).to have_content('Error Detected')

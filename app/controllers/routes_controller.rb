@@ -31,7 +31,7 @@ class RoutesController < ApplicationController
   private
 
   def route_params
-    params.require(:route).permit(:make_private, :starting_system, :starting_dock, :ending_system, :ending_dock, :commodity, :buy_price, :sell_price, :jump_distance, :dock_distance)
+    params.require(:route).permit(:make_private, :starting_system, :starting_dock, :ending_system, :ending_dock, :commodity, :buy_price, :sell_price, :jump_distance, :dock_distance, :cargo_capacity)
   end
 
   def set_route
