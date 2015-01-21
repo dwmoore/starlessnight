@@ -35,10 +35,10 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
-  padding-bottom: 80px;
-  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+  padding: 0 0 80px 0;
   margin-top: 51px; // accommodate the navbar
+  height: 100vh;
   }
 section {
   @extend .row;
@@ -79,4 +79,214 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-xs;
+}
+
+//
+// Begin StarlessNight Styling
+//
+
+// Imports
+
+// Fonts
+
+@font-face {
+  font-family: "Euro Caps";
+  src: font-url('EUROCAPS.TTF') format('truetype');
+}
+@font-face {
+  font-family: "Sintony Regular";
+  src: font-url('Sintony-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Sintony Bold";
+  src: font-url('Sintony-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: "Telegrama Render";
+  src: font-url('telegrama_render.otf') format('opentype');
+}
+@font-face {
+  font-family: "Telegrama Render OSN";
+  src: font-url('telegrama_render_osn.otf') format('opentype');
+}
+$telegrama-render: "Telegrama Render", "Arial", "HelveticaNeue", 
+   "Helvetica Neue", "HelveticaNeueRoman",
+   "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular',
+   "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+$euro-caps: "Euro Caps", "Arial", "HelveticaNeue", 
+   "Helvetica Neue", "HelveticaNeueRoman",
+   "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular',
+   "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+
+// Colors
+
+$ed-orange: #FF8C0D;
+$ed-white: #E4E4E4;
+$ed-blue: #52C0C5;
+$ed-yellow-orange: #FE910B;
+
+// Main Styling Components
+
+body#background {
+  background: image-url('lakonType6.jpg') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+#site-brand {
+  color: $ed-orange;
+  font-family: $euro-caps;
+  font-size: 40px;
+}
+.dark_transparent_background {
+  background-color: rgba(0,0,0,0.7);
+}
+.orange_transparent_background {
+  background-color: rgba(255, 140, 13, 0.08)
+}
+.route {
+  @extend .col-sm-12;
+  border-color: $ed-orange;
+  border-style: solid none;
+  border-width: 2px;
+  color: $ed-orange;
+  font-family: $telegrama-render;
+  margin-bottom: 50px;
+}
+.route-input-label {
+  @extend .col-xs-3;
+  @extend .text-center;
+  @extend .orange_transparent_background;
+  margin: 0 0 0 0;
+  padding: 3px 0 3px 0;
+}
+.route-input-cell {
+  @extend .col-xs-3;
+  @extend .orange_transparent_background;
+  @extend .text-center;
+  border-radius: 0px;
+  color: $ed-orange;
+  margin: 0 0 0 0;
+}
+.route-input-cell:hover,
+.route-input-cell.hover {
+  background: rgba(255, 140, 13, 0.3);
+  color: $ed-orange;
+}
+.route-input-cell input {
+  background: rgba(255, 140, 13, 0.0);
+  border-style: none;
+  border-radius: 0px !important;
+  color: $ed-orange;
+  padding: 3px 0 3px 15px;
+  width: 100%;
+}
+.route-input-cell input:focus,
+.route-input-cell input.focus {
+  background: rgba(255, 140, 13, 0.0);
+  border-style: none;
+  outline: none;
+  border: none;
+  border-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  color: $ed-orange;
+  padding: 0 0 0 0;
+}
+.route-input-submit {
+  font-size: 16px;
+  padding: 5px 0 5px 0;
+}
+.route-highlight-cell {
+  background-color: $ed-orange;
+  border-color: $ed-orange;
+  border-style: none none solid none;
+  border-width: 2px;
+  color: rgba(0,0,0,1);
+  font-size: 16px;
+  padding: 3px 0 3px 0;
+}
+.route-title {
+  @extend .col-xs-10;
+  background-color: $ed-orange;
+  border-color: $ed-orange;
+  border-style: none none solid none;
+  border-width: 2px;
+  color: rgba(0,0,0,1);
+  font-size: 16px;
+  padding: 3px 0 3px 15px;
+}
+.to_spacer {
+  padding: 0 10px;
+}
+.route-actions {
+  @extend .col-xs-1;
+  @extend .text-center;
+  @extend .orange_transparent_background;
+  border-color: $ed-orange;
+  border-style: none none solid none;
+  border-width: 2px;
+  color: $ed-orange;
+  font-size: 16px;
+  padding: 3px 0;
+}
+.route-actions:hover {
+  background-color: $ed-orange;
+  color: rgba(0,0,0,1);
+  text-decoration: none;
+}
+.route-center-cell {
+  @extend .col-xs-4;
+  @extend .orange_transparent_background;
+  border-color: $ed-orange;
+  border-style: none solid none none;
+  border-width: 2px;
+  padding: 15px 0 15px 15px;
+}
+.border-top {
+  border-style: solid none none none;
+  border-width: 2px;
+  padding: 15px 0 15px 0;
+}
+.border-right {
+  border-style: none solid none none;
+  border-width: 2px;
+  padding: 15px 0 15px 15px;
+}
+.border-left {
+  border-style: none none none solid;
+  border-width: 2px;
+  padding: 15px 0 15px 15px;
+}
+.border-bottom {
+  border-color: $ed-orange;
+  border-style: none none solid none;
+  border-width: 2px;
+  padding: 3px 0 3px 15px;
+}
+.clear-padding input {
+  padding: 0 0 0 0;
+}
+.route-left-center-cell {
+  @extend .col-xs-4;
+  @extend .orange_transparent_background;
+  border-color: $ed-orange;
+  border-style: none solid none none;
+  border-width: 2px;
+  padding: 15px 0 15px 15px;
+}
+.route-right-cell {
+  @extend .col-xs-4;
+  @extend .orange_transparent_background;
+  @extend .text-center;
+  padding: 15px 0 15px 15px;
+}
+.route-input-field {
+  background: rgba(255, 140, 13, 0.0);
+  border-style: none;
+  border-radius: 0px !important;
+  color: $ed-orange;
+  padding: 0 0 0 0;
 }

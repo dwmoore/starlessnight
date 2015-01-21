@@ -1,12 +1,45 @@
 <% @routes.each do |route| %>
-  <div id="<%= dom_id(route) %>" class="">
-    <%= route.starting_system %>
-    <%= route.starting_dock %>
-    <%= route.ending_system %>
-    <%= route.ending_dock %>
-    <%= route.distance %>
-    <%= route.commodity %>
-    <%= route.buy_price %>
-    <%= route.sell_price %>
+  <div id="<%= dom_id(route) %>" class="route">
+    <div class="row">
+      <div class="route-title">
+        <%= "#{route.starting_system} - #{route.starting_dock}" %> <span class="to_spacer">to</span> <%= "#{route.ending_system} - #{route.ending_dock}" %>
+      </div>
+      <%= link_to edit_route_path(route), class: "" do %>
+        <div class="route-actions">
+          edit
+        </div>
+      <% end %>
+      <%= link_to route, method: :delete, class: "" do %>
+        <div class="route-actions">
+          delete
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="route-left-center-cell">
+        <%= "Distance: #{route.jump_distance} ly, #{route.dock_distance} ls" %>
+      </div>
+      <div class="route-left-center-cell">
+        <%= "Commodity: #{route.commodity}" %>
+      </div>
+      <div class="route-right-cell">
+        <%= "Buy: #{route.buy_price} Sell: #{route.sell_price}" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="route-left-center-cell">
+        &nbsp
+      </div>
+      <div class="route-left-center-cell">
+        &nbsp
+      </div>
+      <div class="route-right-cell">
+        Cargo: 16 Profit: 1500
+      </div>
+    </div>
   </div>
 <% end %>
+
+
+
+

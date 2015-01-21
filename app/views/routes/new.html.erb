@@ -1,12 +1,84 @@
-<%= simple_form_for @route do |f| %>
-  <%= f.input :starting_system, placeholder: 'Starting System' %>
-  <%= f.input :starting_dock, placeholder: 'Starting Dock' %>
-  <%= f.input :ending_system, placeholder: 'Ending System' %>
-  <%= f.input :ending_dock, placeholder: 'Ending Dock' %>
-  <%= f.input :distance, placeholder: '12.34' %>
-  <%= f.input :commodity, placeholder: 'Commodity Purchased' %>
-  <%= f.input :buy_price, placeholder: 'Purchase Price' %>
-  <%= f.input :sell_price, placeholder: 'Sell Price' %>
-  <%= f.input :make_private %>
-  <%= f.submit %>
-<% end %>
+<div class="route">
+  <%= simple_form_for @route, html: {autocomplete: 'off'}, defaults: { label: false } do |f| %>
+    <div class="row">
+      <div class="col-xs-12 route-highlight-cell text-center">
+        Add New Route
+      </div>
+    </div>
+    <div class="row">
+      <div class="route-input-label">
+        Starting System:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :starting_system, placeholder: 'Starting System' %>
+      </div>
+      <div class="route-input-label">
+        Starting Dock:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :starting_dock, placeholder: 'Starting Dock' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="route-input-label">
+        Ending System:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field  :ending_system, placeholder: 'Ending System' %>
+      </div>
+      <div class="route-input-label">
+        Ending Dock:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field  :ending_dock, placeholder: 'Ending Dock' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="route-input-label">
+        Jump Distance in LY:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :jump_distance, placeholder: '12.34' %>
+      </div>
+      <div class="route-input-label">
+        Dock Distance in LS:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :dock_distance, placeholder: '1234' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="route-input-label">
+        Purchase Price:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :buy_price, placeholder: 'Purchase Price' %>
+      </div>
+      <div class="route-input-label">
+        Sell Price:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :sell_price, placeholder: 'Sell Price' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="route-input-label">
+        Commodity:
+      </div>
+      <div class="route-input-cell">
+        <%= f.input_field :commodity, placeholder: 'Commodity Purchased' %>
+      </div>
+      <div class="route-input-label">
+        &nbsp
+      </div>
+      <div class="route-input-label">
+        &nbsp
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 route-input-cell route-input-submit border-top clear-padding">
+        <%= f.submit %>
+      </div>
+    </div>
+  <% end %>
+</div>
