@@ -1,20 +1,16 @@
 Starlessnight
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+Starlessnight is a basic route tracking app for Elite Dangerous traders.
 
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
+Users are able presently able to log route starting and ending systems and docks, jump distances in light years and dock distances in light seconds, commodities being traded, buy prices, sell prices, and receive a profit/loss calculation.
+
+It is continually under development as a breakable toy to allow my to apply new Rails concepts I am learning to an actual application.
 
 Problems? Issues?
 -----------
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+Found a bug? Please open a new issue and I'll tackle it asap!
 
 Ruby on Rails
 -------------
@@ -24,25 +20,17 @@ This application requires:
 - Ruby 2.1.3
 - Rails 4.2.0
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
 Contributing
 ------------
 
-Credits
--------
+This is mainly a personal project to play around with but if you want to add
+your own take on my design:
+
+Fork, update, submit pull request
+
+If you are contributing, please test your work!
 
 License
 -------
+
+Copyright 2015 Dave Moore.
