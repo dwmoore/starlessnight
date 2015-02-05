@@ -5,7 +5,7 @@ Starlessnight is a basic route tracking app for Elite Dangerous traders.
 
 Users are able presently able to log route starting and ending systems and docks, jump distances in light years and dock distances in light seconds, commodities being traded, buy prices, sell prices, and receive a profit/loss calculation.
 
-It is continually under development as a breakable toy to allow my to apply new Rails concepts I am learning to an actual application.
+It is continually under development as a breakable toy to allow me to apply new Rails concepts I am learning to an actual application.
 
 Problems? Issues?
 -----------
