@@ -23,4 +23,21 @@ RSpec.describe Route, :type => :model do
 
   it { should belong_to(:user) }
 
+  describe "#route_profit" do
+    it "returns the profit of a trade route" do
+      route = build(:route, cargo_capacity: 10, buy_price: 1000, sell_price: 2000)
+
+      profit = route.route_profit
+
+      expect(profit).to eq(10000)
+    end
+
+    it "returns the loss of a trade route" do
+      route = build(:route, cargo_capacity: 10, buy_price: 1000, sell_price: 500)
+
+      profit = route.route_profit
+
+      expect(profit).to eq(-5000)
+    end
+  end
 end

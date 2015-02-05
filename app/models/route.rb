@@ -20,4 +20,9 @@ class Route < ActiveRecord::Base
   validates :jump_distance, format: { with: /\A(\d{0,3})[\.]?(\d{0,2})\z/, message: 'Distance should follow ###.## format' }
 
   belongs_to :user
+
+  def route_profit
+    profit = ProfitCalculator.new(cargo_capacity, buy_price, sell_price)
+    profit.calculate
+  end
 end
