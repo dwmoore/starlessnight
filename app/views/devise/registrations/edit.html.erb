@@ -1,41 +1,54 @@
-<div class="authform">
-  <h3>Edit <%= resource_name.to_s.humanize %></h3>
+<div class="route">
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
     <%= devise_error_messages! %>
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+    <div class="row">
+      <div class="col-xs-12 route-highlight-cell text-center">
+        Update System Credentials
+      </div>
     </div>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
+    <div class="row">
+      <div class="route-input-label">
+        Email Address:
+      </div>
+      <div class="route-input-cell">
+        <%= f.email_field :email, placeholder: "user@email.com" %>
+      </div>
+      <div class="route-input-label">
+        Commander Callsign:
+      </div>
+      <div class="route-input-cell">
+        <%= f.text_field :name, placeholder: "Maverick" %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div class="col-xs-12 route-highlight-cell text-center">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+      </div>
     </div>
-    <fieldset>
-      <p>Leave these fields blank if you don't want to change your password.</p>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, :autocomplete => 'off', class: 'form-control' %>
+    <div class="row">
+      <div class="route-input-label">
+        New Password:
       </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <div class="route-input-cell">
+        <%= f.password_field :password %>
       </div>
-    </fieldset>
-    <fieldset>
-      <p>You must enter your current password to make changes.</p>
-      <div class="form-group">
-        <%= f.label :current_password %>
-        <%= f.password_field :current_password, class: 'form-control' %>
+      <div class="route-input-label">
+        New Password Confirmation:
       </div>
-    </fieldset>
-    <%= f.submit 'Update', :class => 'button right' %>
+      <div class="route-input-cell">
+        <%= f.password_field :password_confirmation %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 route-input-label">
+        Enter your current password to confirm changes:
+      </div>
+      <div class="col-xs-6 route-input-cell">
+        <%= f.password_field :current_password %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 route-input-cell route-input-submit border-top clear-padding">
+        <%= f.submit 'Sign up' %>
+      </div>
+    </div>
   <% end %>
-</div>
-<div class="authform">
-<h3>Cancel Account</h3>
-<p>Unhappy? We'll be sad to see you go.</p>
-<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right' %>
 </div>
